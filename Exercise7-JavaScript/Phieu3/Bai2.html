@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Calculator</title>
+    <style>
+        table {
+            width: 280px;
+            border-top: 7px solid rgb(192, 188, 188);
+            border-left: 7px solid rgb(192, 188, 188);
+            border-right: 7px solid rgb(109, 107, 107);
+            border-bottom: 7px solid rgb(109, 107, 107);
+        }
+
+        table #display {
+            width: 170px;
+        }
+
+        table .trong {
+            width: 30px;
+        }
+
+        table td {
+            text-align: center;
+        }
+
+        table .btn {
+            padding: 5px 15px;
+            font-weight: bold;
+        }
+
+        .btn {}
+
+        table input {
+            padding: 5px;
+        }
+        .more{
+            display: flex;
+            justify-content: center;
+            padding: 5px 15px;
+        }
+        .more .btn{
+            padding: 5px 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="maytinh">
+        <table border="1" align="center">
+            <tr>
+                <td colspan="6" style="text-align: left;">
+                    <input id="display" class="display-result" name="" type="text" value="1.1666666666666667">
+                    <input id="" class="trong" name="" type="text" value="" placeholder="">
+                </td>
+            </tr>
+            <tr>
+                <td><input id="" class="trong" name="" type="text" value="" placeholder=""></td>
+                <td colspan="2"><button class="btn" type="button" value="BkSp">BkSp</button></td>
+                <td colspan="2"><button class="btn" type="button" value="CE">CE</button></td>
+                <td><button class="btn" type="button">C</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" type="button" value="MC">MC</button></td>
+                <td><button class="btn" type="button" value="7">7</button></td>
+                <td><button class="btn" type="button" value="8">8</button></td>
+                <td><button class="btn" type="button" value="9">9</button></td>
+                <td><button class="btn" type="button" value="/">/</button></td>
+                <td><button>sqr</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" type="button" value="MR">MR</button></td>
+                <td><button class="btn" type="button" value="4">4</button></td>
+                <td><button class="btn" type="button" value="5">5</button></td>
+                <td><button class="btn" type="button" value="6">6</button></td>
+                <td><button class="btn" type="button" value="*">*</button></td>
+                <td><button class="btn" type="button" value="%">%</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" type="button" value="MS">MS</button></td>
+                <td><button class="btn" type="button" value="1">1</button></td>
+                <td><button class="btn" type="button" value="2">2</button></td>
+                <td><button class="btn" type="button" value="3">3</button></td>
+                <td><button class="btn" type="button" value="-">-</button></td>
+                <td><button class="btn" type="button" value="1">1/x</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" type="button" value="M+">M+</button></td>
+                <td><button class="btn" type="button" value="0">0</button></td>
+                <td><button class="btn" type="button" value="+">+/-</button></td>
+                <td><button class="btn" type="button" value=".">.</button></td>
+                <td><button class="btn" type="button" value="+">+</button></td>
+                <td><button class="btn" type="button" value="=">=</button></td>
+            </tr>
+        </table>
+        <div class="more">
+            <button class="btn" type="button">More Options</button>
+        </div>
+    </form>
+</body>
+
+</html>

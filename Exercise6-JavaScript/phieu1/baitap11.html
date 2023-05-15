@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table class="" border="1" style="background-color: rgb(255, 153, 204);">
+        <tr>
+            <td colspan="2">Chương trình tra tuổi</td>
+        </tr>
+        <tr>
+            <td>Tuổi dương lịch</td>
+            <td><input name="tuoiduong" type="text" id="positive-age" maxlength="3"></td>
+        </tr>
+        <tr>
+            <td>Tuổi âm lịch</td>
+            <td><input name="output" type="text" id="negative-age"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <input type="reset" name="" value="Xóa" id="delete" onclick="Delete()">
+                <input type="submit" name="" value="Tra cứu" id="search" onclick="myfunction()">
+            </td>
+
+        </tr>
+    </table>
+    <script>
+        const input = document.getElementById('positive-age');
+        const output = document.getElementById('negative-age');
+        const reset = document.getElementById('delete');
+        const result = document.getElementById('search');
+
+        var Can = "";
+        var Chi = "";
+        // Khởi tạo đối tượng Date
+        const date = new Date();
+        function myfunction() {
+
+            //Lấy gía trị nhập vào
+            var count = input.value;
+            var can = (date.getFullYear() - count) % 10;
+            var chi = (date.getFullYear() - count) % 12;
+            switch (can) {
+                case 0:
+                    Can = "Canh"; break;
+                case 1:
+                    Can = "Tân"; break;
+                case 2:
+                    Can = "Nhâm"; break;
+                case 3:
+                    Can = "Quí"; break;
+                case 4:
+                    Can = "Giáp"; break;
+                case 5:
+                    Can = "Ất"; break;
+                case 6:
+                    Can = "Bính"; break;
+                case 7:
+                    Can = "Đinh"; break;
+                case 8:
+                    Can = "Mậu"; break;
+                case 9:
+                    Can = "Kỷ"; break;
+
+            }
+            switch (chi) {
+                case 0:
+                    Chi = "Thân"; break;
+                case 1:
+                    Chi = "Dậu"; break;
+                case 2:
+                    Chi = "Tuất"; break;
+                case 3:
+                    Chi = "Hợi"; break;
+                case 4:
+                    Chi = "Tý"; break;
+                case 5:
+                    Chi = "Sửu"; break;
+                case 6:
+                    Chi = "Dần"; break;
+                case 7:
+                    Chi = "Mão"; break;
+                case 8:
+                    Chi = "Thìn"; break;
+                case 9:
+                    Chi = "Tỵ"; break;
+                case 10:
+                    Chi = "Ngọ"; break;
+                case 11:
+                    Chi = "Mùi"; break;
+            }
+
+            //Hiển thị kết quả tra cứu
+            var text = Can + " " + Chi;
+            output.value = text;
+        }
+        function Delete() {
+            input.value = "";
+            output.value = "";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border: 2px black;
+            border-style: double;
+            width: 600px;
+        }
+        p{
+            font-size: 17px;
+            font-weight: bold;
+            text-align: center;
+            
+        }
+        #checkbox{
+            padding-left: 100px;
+        }
+        #button{
+            padding-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form action="ykien">
+        <p>PHIẾU THĂM DÒ Ý KIẾN</p>
+        <table>
+            <tr>
+                <td>
+                    <label for="Name">Tên đăng nhập: </label>
+                    <input type="text" id="Name" name="name">
+                </td>
+                <td>
+                    <label for="gender" value="gioitinh">Giới tính:</label>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Nam</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td><p style="font-weight: normal;">Những mục bạn thường quan tâm trên Internet</p></td>
+            </tr>
+            <tr>
+                
+                <td id="checkbox">
+                    <input type="checkbox" name="list" id="New" value="News">
+                    <label for="News">Tin tức</label><br>
+                    <input type="checkbox" name="list" id="Giaitri" value="giaitri">
+                    <label for="News">Giải trí</label><br>
+                    <input type="checkbox" name="list" id="study" value="study">
+                    <label for="News">Góc học tập</label><br>
+                    <input type="checkbox" name="list" id="other" value="other">
+                    <label for="other">Các mục khác</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="button">
+                    <button type="Submit">Gửi đi</button>
+                    <button type="Reset">Phục hồi</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

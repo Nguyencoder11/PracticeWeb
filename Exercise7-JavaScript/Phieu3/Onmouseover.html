@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event MouseOver</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content:center;
+            flex-wrap: wrap;
+        }
+
+        .first,
+        .second,
+        .last {
+            display: block;
+            width: 300px;
+            height: 300px;
+            border-left: 10px solid white;
+        }
+
+        .first {
+            background-color: red;
+        }
+
+        .second {
+            background-color: blue;
+        }
+
+        .last {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align: center;">Mouse over the squares and the background color will change!</h2>
+    <div class="container">
+        <div class="first" onmouseover="First(this)" onmouseout="first(this)">
+        </div>
+        <div class="second" onmouseover="Second(this)" onmouseout="second(this)">
+        </div>
+        <div class="last" onmouseover="Last(this)" onmouseout="last(this)">
+        </div>
+    </div>
+    <script>
+        function First(element1) {
+            element1.style.background = 'pink';
+        }
+        function first(element1) {
+            element1.style.background = 'red';
+        }
+        function Second(element2) {
+            element2.style.background = 'pink';
+        }
+        function second(element2) {
+            element2.style.background = 'blue';
+        }
+        function Last(element3) {
+            element3.style.background = 'pink';
+        }
+        function last(element3) {
+            element3.style.background = 'green';
+        }
+    </script>
+</body>
+
+</html>

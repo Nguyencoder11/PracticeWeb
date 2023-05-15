@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input {
+            width: 60px;
+            margin: 7px;
+        }
+
+        #result {
+            width: 400px;
+            height: 50px;
+            border: solid 1px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="display:flex; justify-content: center;">
+        <div>
+            <h2>Giải phương trình bậc 2</h2>
+            <p>ax<sup>2</sup>+ bx + c = 0</p>
+            <div id="result"></div>
+            <label for="inputa">Nhập a: </label>
+            <input type="text" class="input" id="numbera">
+            <label for="inputb">Nhập b: </label>
+            <input type="text" class="input" id="numberb">
+            <label for="inputc">Nhập c: </label>
+            <input type="text" class="input" id="numberc">
+            <br>
+            <input type="submit" id="ketqua" value="Solve" class="input">
+            <input type="submit" id="reset" value="Reset" class="input">
+            <script>
+                const show = document.getElementById('result');
+                function calculate() {
+                    var a = document.getElementById('numbera').value;
+                    var b = document.getElementById('numberb').value;
+                    var c = document.getElementById('numberc').value;
+                    if (a == 0) {
+                        show.innerHTML = "Không phải phương trình bậc 2!";
+                        return 0;
+                    } else {
+                        var x1, x2;
+                        var delta = b * b - 4 * a * c;
+                        if (delta > 0) {
+                            x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                            x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                            show.innerHTML = "Phương trình có nghiệm là: " + "x1 = " + x1 + " x2= " + x2;
+                        }
+                        if (delta == 0) {
+                            x1 = x2 = -b / (2 * a);
+                            show.innerHTML = "Phương trình có nghiệm là: " + "x1 = x2 = " + x1;
+                        }
+                        if (delta < 0) {
+                            show.innerHTML = "Phương trình vô nghiệm";
+                            return 0;
+                        }
+                    }
+                }
+                document.getElementById('ketqua').addEventListener('click', calculate);
+                document.getElementById('reset').addEventListener('click', function () {
+                    document.getElementById('numbera').value = "";
+                    document.getElementById('numberb').value = "";
+                    document.getElementById('numberc').value = "";
+                    show.innerHTML = "";
+                });
+
+
+
+            </script>
+
+
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>

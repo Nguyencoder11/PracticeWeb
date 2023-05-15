@@ -1,0 +1,58 @@
+header{
+    background-image: url(../images/header.jpg);
+    text-align: center;
+    background-size: cover;
+    height: 200px;
+	font-size: 1.2em;
+}
+header h1{
+	color: rgb(0, 255, 145);
+	text-transform: uppercase;
+	padding-top: 20px;
+	padding-bottom: 33px;
+}
+header a{
+	background-color: white;
+	padding: 10px 50px;
+	text-decoration: none;
+	opacity: 0.5;
+	border-radius: 15px;
+	margin: 20px;
+	color: #050505;
+	font-weight: bold;
+}
+.active{
+	background-color: #51e7f8;
+	opacity: 1;
+	color: #fc0606;
+}
+main{
+	display: flex;
+}
+.left{
+	width: 20%; /*độ rộng là 20% so với độ rộng của parent */
+	background-color: #74ef6e;
+	text-align: center; /*dùng để canh giữa những phần tử inline trong container */ 
+}
+.left img{
+	width: 80%; /*80% độ rộng của left */
+	margin-top: 15px;
+	margin-bottom: 10px;
+	border: 3px solid #ff7000;
+	border-radius: 8px;
+}
+
+.right{
+	padding-left: 2%;
+	padding-top: 20px;
+	font-size: 1.15em;
+}
+
+.right h2{
+	color: #007a95;
+}
+
+li a{
+	text-decoration: none;
+	color: red;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo web giới thiệu</title>
+    <style>
+        /* Format main div */
+        #gioithieu{
+            background-color: #facfcf;
+            width: 960px;
+            height: 980px;
+        }
+
+        /* Format header elements */
+        .header p{
+            font-weight: bold;
+            font-size: 50px;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+        .header strong {color: white;}
+
+        /* Format Nav Menu elements */
+        .nav {
+            background-color: #420000;
+            padding: 15px;
+            padding-left: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .nav a{
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 120px;
+        }
+
+        /* Format Aside Menu Elements */
+        .menuleft{
+            float: left;
+            clear: both;
+            width: 230px;
+            height: 450px;
+            margin: 0;
+            padding: 0;
+        }
+        .menuleft ul{
+            margin-left: 5px;
+            list-style-type: none;
+            padding-left: 0px;
+            width: 204px;
+            height: 530px;
+            background-color: #9d6f68;
+            padding-top: 20px;
+        }
+
+        .menuleft li a{
+            text-decoration: none;
+            text-align: left;
+            color: aliceblue;
+            padding-left: 10px;
+        }
+        .menuleft li{
+            width: auto;
+            height: 54px;
+        }
+
+        /* Format Section Elements */
+        .advise {
+            clear: right;
+            width: 950px;
+            padding-top: 13px;
+        }
+
+        /* Format Article Elements */
+        .content{
+            clear: right;
+            width: 700px;
+            height: 300px;
+            float: left;
+        }
+        h4{
+            color: aliceblue; 
+            position: relative;
+            top: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gioithieu">
+        <header class="header">
+            <p><strong>Slick</strong>Red</p>
+        </header>
+        <nav class="nav">
+                <a href="#title">Home</a>
+                <a href="#title">About</a>
+                <a href="#title">Products</a>
+                <a href="#title">Services</a>
+                <a href="#title">Design</a>
+        </nav>
+        <aside class="menuleft">
+            <ul>
+                <li><a href="#">Links</a></li>
+                <li><a href="#">SEO</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">Ajax</a></li>
+                <li><a href="#">JQuery</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">Java</a></li>
+                <li><a href="#">Internet Marketing</a></li>
+                <li><a href="#">KHTML Templates</a></li>
+            </ul>
+        </aside>
+        <section class="advise">
+            <h2>You may use this template in any manner you like. All I ask is that you leave the link back to my site at the bottom of the page.</h2>
+        </section>
+        <article id="content">
+            <div class="content">
+                <h3>Template Notes</h3>
+                <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h3>More information</h3>
+                <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h3>Template Notes</h3>
+                <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </article>
+        <footer>
+            <h4 id="footer">florida web design | web tutorials | html codes | free templates</h4>
+        </footer>
+    </div>
+</body>
+</html>

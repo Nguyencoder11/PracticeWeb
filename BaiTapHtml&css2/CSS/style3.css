@@ -1,0 +1,77 @@
+.content{
+    border: 1px solid black;
+    height: 250px;
+    width: 600px;
+}
+
+h1{
+    text-align:center; 
+    color: red; 
+}
+
+/* Dieu chinh vi tri cua 2 list */
+.ulist1{
+    float: left;
+    margin-right: 70px;
+    position: absolute;
+    left: 100px;
+}
+.ulist2{
+    position: absolute;
+    left: 350px;
+}
+
+/* Setup img bullet cho 2 danh sach */
+.ulist1 #list1{
+    list-style: square outside url(../mediaFiles/list1.png);
+}
+.ulist2 #list2{
+    list-style: square outside url(../mediaFiles/list2.png);
+}
+
+/* Setup duong vien va mau vien */
+.ulist1 li{
+    text-align: center;
+    border: 1px solid black;
+    border-right: 1px solid rgb(226, 226, 6);
+    border-bottom: 2px solid rgb(197, 197, 14);
+    text-align: left;
+    line-height: 25px;
+}
+.ulist2 li{
+    text-align: center;
+    border: 1px solid black;
+    border-right: 1px solid rgb(226, 226, 6);
+    border-bottom: 2px solid rgb(197, 197, 14);
+    text-align: left;
+    line-height: 26px;
+}
+
+/* Show */
+#list1 li a{
+    text-decoration: none;
+    color: black;
+    display:block;
+    
+}
+#list2 li a{
+    text-decoration: none;
+    color: black; 
+    display:block;
+}
+
+/* Tao hover cho 2 list */
+#list1 li:hover{
+    background-color: rgb(205, 204, 0);
+}
+#list2 li:hover{
+    background-color: rgb(205, 204, 0);
+}
+
+/* Thay doi mau chu khi hover */
+#list1 li a:hover{
+    color:aliceblue;
+}
+#list2 li a:hover{
+    color:aliceblue;
+}

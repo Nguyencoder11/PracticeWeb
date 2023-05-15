@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hieu ung Switch</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 5px auto;
+        }
+        .show {
+            text-align: center;
+        }
+
+        img {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="show">
+        <p>Click to <b>Turn on/ Turn off</b></p>
+        <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="The Bulb" id="myImage" onclick="SwitchBulb()">
+    </div>
+    <script>
+        function SwitchBulb() {
+            var image = document.getElementById("myImage");
+
+            if (image.src.match("bulbon")) {
+                image.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+            } else {
+                image.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+            }
+        }
+    </script>
+</body>
+
+</html>

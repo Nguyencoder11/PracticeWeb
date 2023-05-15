@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            margin: auto;
+            /* box-sizing: border-box; */
+            width: 700px;
+            margin-top: 30px;
+        }
+
+        .content {
+            display: block;
+            border: 2px solid red;
+            width: 700px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid red;
+            height: 150px;
+        }
+
+        .title-banner {
+            width: 576px;
+            height: 150px;
+            border: 1px solid red;
+        }
+
+        .image-banner img {
+            width: 120px;
+            height: 150px;
+            margin-left: 5px;
+        }
+
+        .content-main {
+            display: flex;
+        }
+
+        .section-left,
+        .section-right {
+            padding: 0;
+            
+            border: 1px solid red;
+            /* justify-content: center;
+            align-items: center; */
+        }
+
+        li{
+            text-align: justify;
+            padding: 10px 0;
+            padding-right: 10px;
+        }
+        .list p{
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="header">
+            <div class="title-banner">
+                <div style="background-color: red; height: 60px; width: 570px;">
+                    <h3 style="color: #ffffff; text-align: right; padding-top: 16px; padding-right: 5px;">Công nghệ dầu
+                        gội dưỡng tóc mới</h3>
+                </div>
+                <div class="empty" style="background-color: #ffffff; height: 20px;  width: 570px;"></div>
+                <div style="background-color: #ffbbbb; height: 67px; width: 570px;">
+                    <h2 style="color: red; text-align: center; padding-top: 18px; font-size: 30px;">Tỏa sáng cùng DOUBLE
+                        RICH</h2>
+                </div>
+            </div>
+            <div class="image-banner">
+                <img src="../BaiTapHTML&CSS/images/banner.png" alt="Anh dau goi">
+            </div>
+        </div>
+        <div class="content-main">
+            <div class="section-left">
+                <div class="list">
+                    <p style="color: red; font-weight: bold; padding-left: 5px;"><span style="padding-right: 3px;">&#9744</span>Sản phẩm khuyến mãi:</p>
+                    <ul style="padding-left: 40px;">
+                        <li>Dầu gội Double Rich mới 200ml, 400ml có tem khuyến mãi</li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <p style="color: red; font-weight: bold; padding-left: 5px;"><span style="padding-right: 3px;">&#9744</span>Đối tượng tham gia:</p>
+                    <ul style="padding-left: 40px;">
+                        <li>Áp dụng cho tất cả người tiêu dùng cuối cùng mua sản phẩm khuyến mãi</li>
+                        <li style="padding-top: 0;">Chương trình không áp dụng cho nhân viên, nhà phân phối bao gồm các tổng đại lý, đại lý, cửa
+                            hàng
+                            bán sỉ, lẻ và các cá nhân kinh doanh sản phẩm của công ty LDMP LG Vina, công ty quảng cáo,
+                            công
+                            ty
+                            làm dịch vụ chương trình khuyến mãi này, nhân viên siêu thị</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-right">
+                <div class="list">
+                    <p style="color: red; font-weight: bold; padding-left: 5px;"><span style="padding-right: 3px;">&#9744</span>Cách thức nhận giải:</p>
+                    <ol style="padding-left: 40px;">
+                        <li><b><i>Giải khuyến khích: </i></b>Khách hàng đổi quà tại các cửa hàng bán lẻ trên toàn quốc
+                            bắt
+                            đầu.
+                            Bắt đầu từ ngày 15/06/2005 đến 17h ngày 12/08/2005</li>
+                        <li><b><i>Giải đặc biệt, nhất, nhì: </i></b>Khách hàng cắt phần mã vạch trên mỗi chai dầu gội có
+                            khuyến
+                            mãi và gởi kèm phiếu trúng thưởng về văn phòng công ty, hạn chót đến hết ngày 31/07/2005
+                            (căn cứ
+                            theo dấu bưu điện nơi gởi). Sau đó công ty sẽ gởi thư thông báo trúng thưởng và cách thức
+                            nhận
+                            quà
+                            cho khách hàng</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

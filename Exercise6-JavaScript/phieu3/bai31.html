@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input {
+            width: 70px;
+            margin: 5px 10px 5px 0px;
+        }
+
+        #Hienthi {
+            width: 400px;
+            height: 50px;
+            border: 1px solid;
+            border-radius: 7px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: flex; justify-content: center;">
+        <div>
+            <pre><b>Giải hệ phương trình:</b>
+                { ax  + by  = c
+                { a'x + b'y = c'
+            </pre>
+            <div id="Hienthi"></div>
+
+            <label for="inputa">Nhập a: </label>
+            <input type="text" class="input" id="number1">
+            <label for="inputb">Nhập b: </label>
+            <input type="text" class="input" id="number2">
+            <label for="inputc">Nhập c: </label>
+            <input type="text" class="input" id="number3"><br>
+            <label for="inputa'">Nhập a': </label>
+            <input type="text" class="input" id="number4">
+            <label for="inputb'">Nhập b': </label>
+            <input type="text" class="input" id="number5">
+            <label for="inputc'">Nhập c': </label>
+            <input type="text" class="input" id="number6">
+            <br>
+            <input type="submit" id="submit" value="Solve">
+            <input type="reset" id="reset" value="Reset">
+        </div>
+    </div>
+
+    <script>
+        // Hàm trả ra kết quả 
+        function result() {
+            //khởi tạo biến
+            //Lấy các giá trị của các hệ số được nhập vào input
+            var a1 = document.getElementById('number1').value;
+            var b1 = document.getElementById('number2').value;
+            var c1 = document.getElementById('number3').value;
+            var a2 = document.getElementById('number4').value;
+            var b2 = document.getElementById('number5').value;
+            var c2 = document.getElementById('number6').value;
+
+            var Det = a1 * b2 - a2 * b1;
+            var DetX = c1 * b2 - c2 * b1;
+            var DetY = a1 * c2 - c1 * a2;
+            if (Det == 0) {
+                if (DetX == 0 && DetY == 0) {
+                    document.getElementById('Hienthi').innerHTML = "Hệ có vô số nghiệm";
+                } else {
+                    document.getElementById('Hienthi').innerHTML = "Hệ vô nghiệm";
+                }
+            } else {
+                var x = DetX / Det;
+                var y = DetY / Det;
+                document.getElementById('Hienthi').innerHTML = "x = " + x + "<br>" + "y = " + y;
+            }
+        }
+        // Thêm sự kiện hiển thị ra kết quả khi thực hiện click vào Submit button
+        document.getElementById('submit').addEventListener('click', result);
+
+        function reset() {
+            //Xóa các giá trị 
+            document.getElementById('number1').value = "";
+            document.getElementById('number2').value = "";
+            document.getElementById('number3').value = "";
+            document.getElementById('number4').value = "";
+            document.getElementById('number5').value = "";
+            document.getElementById('number6').value = "";
+            document.getElementById('Hienthi').innerHTML = "";
+        }
+        // Thêm sự kiện xóa kết quả khi thực hiện click vào Reset button
+        document.getElementById('reset').addEventListener('click', reset);
+    </script>
+</body>
+
+</html>

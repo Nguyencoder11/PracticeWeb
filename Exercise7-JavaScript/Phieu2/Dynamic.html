@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <label>Enter Your Email Address</label>
+        <input type="text" name="" id="email">
+        <button onclick="addElement()">Add Mores</button>
+    </p>
+
+    <script>
+        function addElement(){
+            // Tạo thẻ p
+            var p=document.createElement('p');
+
+            // Tạo thẻ label và gán text cho label
+            var l=document.createElement('label');
+            l.innerHTML="Enter Your Email Address ";
+
+            // Tạo thẻ input 
+            var i=document.createElement('input');
+
+            // Tạo thẻ button gán value cho button
+            var b=document.createElement('button');
+            b.innerHTML = "Remove";
+
+            // Thêm form thẻ p vào trang web
+            p.appendChild(l);
+            p.appendChild(i);
+            p.appendChild(b);
+            document.body.appendChild(p);
+
+            // thêm sự kiện cho button Remove
+            // Khi click vào button thì xóa 
+            b.addEventListener('click', function(){
+                document.body.removeChild(b.parentElement);
+            });
+        }
+    </script>
+</body>
+</html>

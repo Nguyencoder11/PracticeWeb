@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+    <p><b>Giải phương trình bậc 2:</b> 
+        ax<sup>2</sup>+bx+c=0
+    </p>
+    <p id="calculate"></p>
+    <script>
+       let a=prompt("a = ");
+       let b=prompt("b = ");
+       let c=prompt("c = ");
+        var delta=b*b-4*a*c;
+        if(delta==0){
+            document.write("Phương trình có nghiệm kép x = " + -b/(2*a));
+        }else if(delta > 0){
+            document.writeln("Phương trình có 2 nghiệm phân biệt:"+"<br>");
+            document.writeln("x1 = " + (-b+Math.sqrt(delta))/(2*a)+"<br>");
+            document.write("x2 = " + (-b-Math.sqrt(delta))/(2*a));
+        }else{
+            document.write("Phương trình vô nghiệm");
+        }
+    </script>
+</body>
+</html>

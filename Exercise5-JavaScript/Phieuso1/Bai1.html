@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date of Birth</title>
+    <style>
+        p {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Ngày tháng năm sinh: <select id="index1"></select> tháng <select id="index2"></select> năm <select
+            id="index3"></select></p>
+    <script>
+        // Ham tao the option
+        function creatoption(st, ed, sel) {
+            for (var index = st; index <= ed; index++) {
+                // Khoi tao the option voi creatElement();
+                var option = document.createElement('option');
+                option.value = index; // Gan gia tri index cho option
+                option.text = index; // Hien thi gia tri cua index
+                sel.add(option);  // Them the option voi object can tao
+            }
+        }
+
+        // Them the option voi object ngay
+        var selDate = document.getElementById("index1");
+        creatoption(1, 31, selDate);
+
+        // Them the option voi object thang
+        var selMonth = document.getElementById("index2");
+        creatoption(1, 12, selMonth);
+
+        // Them the option voi object nam
+        var selYear = document.getElementById("index3");
+        creatoption(1900, 2022, selYear);
+    </script>
+</body>
+
+</html>

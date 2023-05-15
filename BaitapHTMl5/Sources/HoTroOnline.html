@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bar_title {
+            display: flex;
+            justify-content: space-between;
+            background-color: #8c0209;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding: 10px 0;
+        }
+
+        .sidebarleft {
+            padding: 0;
+            padding-left: 10px;
+            display: flex;
+            flex-flow: column wrap;
+            list-style-type: none;
+        }
+
+        .sidebarleft li {
+            line-height: 40px;
+            display: block;
+            border-bottom: 1px dashed #8c0209;
+
+        }
+
+        .sidebarleft li>a {
+            display: block;
+            text-decoration: none;
+            color: #8c0209;
+            font-size: 15px;
+        }
+
+        /* .subframe {
+            position: relative;
+            top: 340px;
+        }
+
+        .submath {
+            position: relative;
+            top: 370px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="subframe" style="border: 1px solid #8c0209; border-top-left-radius: 22px;">
+        <div class="bar_title">
+            <div class="bar_left"></div>
+            <div class="bar_bg" style="color: white; font-weight: bold;">Hỗ trợ trực tuyến</div>
+            <div class="bar_right"></div>
+        </div>
+        <div class="information"
+            style="display: flex; justify-content: center; flex-direction: column; flex-wrap: wrap; align-items: center;">
+            <img src="../Medias/yahoo.png" style="padding-top: 10px;" alt="Yahoo"><br>
+            <img src="../Medias/Skype.png" alt="Skype"><br>
+            <p style="color: #8c0209;">Hot line: <b>0914 024 357</b></p>
+        </div>
+    </div>
+</body>
+</html>

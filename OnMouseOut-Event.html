@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện MouseOut</title>
+    <script language="javascript">
+        var num = 0
+        function showLink(num) {
+            if (num == 1) {
+                document.forms[0].elements[0].value = "You have selected Aptech";
+            }
+            if (num == 2) {
+                document.forms[0].elements[0].value = "You have selected Asset";
+            }
+            if (num == 3) {
+                document.forms[0].elements[0].value = "You have selected Arena";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type=text size=60>
+    </form>
+    <a href="#" onMouseOver="showLink(1)" document.bgcolor="green">Aptech</a><br>
+    <a href="#" onMouseOver="showLink(2)">Asset</a><br>
+    <a href="#" onMouseOver="showLink(3)">Arena</a><br>
+</body>
+
+</html>

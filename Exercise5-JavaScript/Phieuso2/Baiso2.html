@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 50px 50px 0px 50px;
+        }
+        button{
+            padding: 10px;
+            font-weight: bold;
+        }
+        #result{
+            border: 1px solid black;
+            width: 205px;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Tính toán</h1>
+    <!-- The hien thi ket qua -->
+    <div id="result"></div>
+
+    <!-- The cac button dung de tinh toan -->
+    <div class="calculate">
+        <div class="number">
+            <button class="btn" value="1">1</button>
+            <button class="btn" value="2">2</button>
+            <button class="btn" value="3">3</button>
+            <button class="btn" value="4">4</button>
+            <button class="btn" value="5">5</button>
+            <button class="btn" value="+">+</button><br>
+            <button class="btn" value="6">6</button>
+            <button class="btn" value="7">7</button>
+            <button class="btn" value="8">8</button>
+            <button class="btn" value="9">9</button>
+            <button class="btn" value="0">0</button>
+
+            <!-- Gan su kien onclick cho button = -->
+            <button class="btn" onclick="equal()">=</button>
+        </div>
+    </div>
+    <script>
+        // Lay gia tri so tu class btn
+        const numbers = document.getElementsByClassName('btn');
+
+        // Tao hang tra ra ket qua vao the hien thi ket qua
+        const result = document.getElementById('result');
+
+        for(let number of numbers){
+            // Them su kien khi click vao btn 
+            // gia tri cua btn se hien thi len bang kq
+                number.addEventListener('click', function(){
+                    result.innerHTML += this.value;
+                });
+        }
+            
+        function equal(){
+            // Cong cac gia tri dc nhap tu btn va tra ra kq
+            let res = result.innerHTML;
+            let output = eval(res);
+            result.innerHTML = output;
+        }
+    </script>
+</body>
+
+</html>

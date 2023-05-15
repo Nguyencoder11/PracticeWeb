@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Sự kiện onResize -->
+    <script>
+        window.onresize = notify;
+        function notify() {
+            alert("Window resized!");
+        }
+    </script>
+</head>
+
+<body bgcolor="lavender">
+    <form>
+
+        <!-- Sự kiện onMouseUp và onMouseDown -->
+        <input type="button" name="text1" value="change bgcolor" onmousedown="(document.bgColor='aqua')"
+            onmouseup="(document.bgColor='limegreen')">
+    </form>
+    Please resize the window.
+</body>
+
+</html>

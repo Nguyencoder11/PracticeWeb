@@ -1,0 +1,20 @@
+header img{
+    height: 100px; 
+    margin: 0;
+}
+section{
+    height: 500px;
+}
+aside{
+    background-color: grey;
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+aside h2{
+    text-align: center;
+}
+aside a{
+    color: purple;
+    text-align: left;
+}

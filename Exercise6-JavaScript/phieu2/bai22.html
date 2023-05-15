@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 50px 50px 0px 50px;
+        }
+        
+        button {
+            padding: 10px;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        #result {
+            border: 1px solid black;
+            width: 205px;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+        </style>
+</head>
+
+<body>
+    <!-- The hien thi ket qua -->
+    <div id="result"></div>
+
+    <!-- The cac button dung de tinh toan -->
+    <div class="calculate">
+        <div class="number">
+            <button class="btn" value="1">1</button>
+            <button class="btn" value="2">2</button>
+            <button class="btn" value="3">3</button>
+            <button class="btn" value="4">4</button>
+            <button class="btn" value="5">5</button>
+            <button class="btn" value="-">-</button><br>
+            <button class="btn" value="6">6</button>
+            <button class="btn" value="7">7</button>
+            <button class="btn" value="8">8</button>
+            <button class="btn" value="9">9</button>
+            <button class="btn" value="0">0</button>
+            <button class="btn" onclick="equal()">=</button>
+            <button class="btn" onclick="reset()">Reset</button>
+        </div>
+    </div>
+    <script>
+        // Lay so duoc nhap tu button
+        const numbers = document.getElementsByClassName('btn');
+
+        // Tao hang tra ra ket qua vao the hien thi ket qua
+        const result = document.getElementById('result');
+        for(let number of numbers){
+                number.addEventListener('click', function(){
+                    result.innerHTML += this.value;
+                });
+        }
+            
+        function equal(){
+            let res = result.innerHTML;
+            let output = eval(res);
+            result.innerHTML = output;
+        }
+
+        function reset(){
+            document.getElementById('result').innerHTML = "";
+        }
+    </script>
+</body>
+
+</html>
