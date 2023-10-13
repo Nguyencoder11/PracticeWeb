@@ -1,29 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài tập tổng hợp</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        main {
+            width: 1200px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border: 2px solid black;
+            font-size: 25px;
+        }
+
+        .header {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid black;
+            height: 130px;
+            overflow: hidden;
+        }
+
+        .left-image {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .left-image img {
+            width: 100px;
+            height: 140px;
+        }
+
+        .body-content {
+            box-sizing: border-box;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        .mid-banner {
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .mid-banner p {
+            font-size: 95px;
+        }
+
+        .What {
+            font-size: 80px;
+        }
+
+        .Where {
+            font-size: 60px;
+        }
+
+        .mid-banner p,
+        .What,
+        .Where {
+            color: rgb(3, 100, 147);
+            font-weight: bold;
+            font-family: ;
+            text-align: center;
+        }
+
+        .div-title {
+            background-color: rgb(0, 106, 161);
+            padding: 5px 0;
+            font-size: 25px;
+        }
+
+        .main-titles {
+            color: white;
+        }
+
+        .title {
+            color: rgb(0, 106, 161);
+            font-weight: bold;
+        }
+
+        ul {
+            padding-left: 45px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .content-details {
+            display: flex;
+        }
+
+        .content-details img {
+            width: 100px;
+            height: 80px;
+        }
+
+        .mota {
+            padding: 0 10px;
+        }
+    </style>
 </head>
+
 <body>
-    <table border="1" rules="all">
-        <tr>
-            <td colspan="2">
-                <h1>Ai?</h1>
-                <h2>Cái gì?</h2>
-                <h3>Ở đâu?...</h3>
-            </td>
-        </tr>
-        <tr>
-            <td rowspan="5">
-                <li type="circle"><a href=""></a></li>
-                <li type="circle"><a href=""></a></li>
-                <li type="circle"><a href=""></a></li>
-                <li type="circle"><a href=""></a></li>
-                <li type="circle"><a href=""></a></li>
-            </td>
-        </tr>
-    </table>
+    <main id="Home">
+        <!-- Than trang web -->
+        <div class="body-content">
+            <!-- Dau trang web -->
+            <div class="header" style="padding: 20px 0;">
+                <div class="left-image">
+                    <img style="padding-right: 20px;" src="./images/Love.png" alt="Love">
+                    <img src="./images/Song.png" alt="song">
+                </div>
+                <div class="mid-banner">
+                    <p><span class="Who">Ai?</span> <span class="What">Cái gì?</span> <span class="Where">Ở đâu?
+                            ...</span>
+                    </p>
+                </div>
+                <div class="right-image">
+                    <img style="height: 120px;" src="./images/hoicham.png" alt="question">
+                </div>
+            </div>
+
+            <!-- Than trang web -->
+            <div class="container" style="box-sizing: border-box; display: flex;">
+                <!-- Thanh menu list phai -->
+                <div class="menu-list" style="border: 1px solid black; width: 450px;">
+                    <ul style="padding-left: 70px;" type="circle">
+                        <li style="font-size: 30px; line-height: 65px;"><a href="#TinhYeu&GiaDinh">Tình yêu và gia
+                                đình</a>
+                        </li>
+                        <li style="font-size: 30px; line-height: 65px;"><a href="#suckhoe">Sức khỏe</a></li>
+                        <li style="font-size: 30px; line-height: 65px;"><a href="#dulich">Du lịch</a></li>
+                        <li style="font-size: 30px; line-height: 65px;"><a href="#amthuc">Ẩm thực</a></li>
+                        <li style="font-size: 30px; line-height: 65px;"><a href="#amnhac">Âm nhạc</a></li>
+                    </ul style="padding-left: 50px;">
+                </div>
+
+                <!-- Noi dung ben trai -->
+                <div class="main-content" style="width: 750px;">
+                    <div class="part1">
+                        <div id="TinhYeu&GiaDinh" class="love-family">
+                            <div class="div-title">
+                                <h3 class="main-titles">Tình yêu và gia đình</h3>
+                            </div>
+                            <div class="traucau">
+                                <p class="title">Trầu cau</p>
+                                <div class="content-details">
+                                    <div class="anh">
+                                        <img src="./images/quacau.png" alt="anh">
+                                    </div>
+                                    <div class="mota">
+                                        Tình yêu là gì? Là ta yêu một người mỗi ngày trong một năm. Mỗi năm trong một
+                                        đời người...
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="xaydungfamily">
+                                <p class="title">Xây dựng hạnh phúc gia đình qua những bữa cơm hàng ngày</p>
+                                <div class="content-details">
+                                    <div class="anh">
+                                        <img src="./images/Comnha.png" alt="anh">
+                                    </div>
+                                    <div class="mota">
+                                        Nói đến hạnh phúc gia đình chúng ta thường mô tả bằng những từ thật đẹp đẽ và
+                                        được thể hiện qua những giá trị đạo đức rất đáng trân trọng như tình yêu, lòng
+                                        chung thủy, tình nghĩa vợ chồng, lòng yêu thương, hy sinh cho con cái, sự quý
+                                        trọng, hiếu lễ của con cháu với cha mẹ, ông bà...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="suckhoe" class="health">
+                            <div class="div-title">
+                                <h3 class="main-titles">Sức khỏe</h3>
+                            </div>
+                            <div class="loikhuyen">
+                                <p class="title">10 lời khuyên trong dinh dưỡng</p>
+                                <div class="content-details">
+                                    <div class="anh">
+                                        <img src="./images/vitamin.png" alt="anh">
+                                    </div>
+                                    <div class="mota">
+                                        Cơ thể chúng ta cần nhiều chất dinh dưỡng từ nhiều nguồn lương thực khác nhau.
+                                        Vì vậy chúng ta nên thay đổi các loại lương thực khác nhau. Chúng ta không cần
+                                        kiêng chi cả - quan trọng là chú ý đến số lượng...
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="bothuocla">
+                                <p class="title">Làm sao để bỏ thuốc lá?</p>
+                                <div class="content-details">
+                                    <div class="anh">
+                                        <img src="./images/thuocla.png" alt="anh">
+                                    </div>
+                                    <div class="mota">
+                                        Sức khỏe của chính bạn. Không hút thuốc lá tức là giảm thiểu đáng kể rủi ro mắc
+                                        các loại bệnh ung thư và sức khỏe sẽ tăng lên đáng kể so với khi còn hút thuốc.
+                                    </div>
+                                </div>
+                                <div style="display: flex; justify-content: flex-end;"><a href="#Home">Về đầu trang</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part2">
+                        <div id="dulich" class="tour">
+                            <div class="div-title">
+                                <h3 class="main-titles">Du lịch</h3>
+                            </div>
+                            <div class="newtour">
+                                <p class="title">Các tour mới nhất</p>
+                                <div class="list">
+                                    <ul>
+                                        <li>Côn Minh - Đại Lý - Lệ Giang</li>
+                                        <li>Đến Macau xem casino</li>
+                                        <li>Về Cà mau ăn tôm tít</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="placetour">
+                                <p class="title">Các điểm du lịch nổi tiếng trên thế giới</p>
+                                <div class="list">
+                                    <ul>
+                                        <li>Đảo Bali xinh đẹp - Indonesia</li>
+                                        <li>Thành cổ Rome và tháp nghiêng Pisa</li>
+                                        <li>Vạn Lý Trường Thành</li>
+                                    </ul>
+                                </div>
+                                <div style="display: flex; justify-content: flex-end;"><a href="#Home">Về đầu trang</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part3">
+                        <div id="amthuc" class="food">
+                            <div class="div-title">
+                                <h3 class="main-titles">Ẩm thực</h3>
+                            </div>
+                            <div class="amthuc"
+                                style="display: flex; justify-content: space-between; align-items: center;">
+                                <ul type="square" style="padding-top: 0;">
+                                    <li>Các món ăn mới trong tuần</li>
+                                    <li>Chuyên mục dạy nấu ăn</li>
+                                    <li>Món ngon Hà Nội</li>
+                                    <li>Các món ăn dân dã ở miền Tây</li>
+                                </ul>
+                                <img style="width: 150px; height: 150px; padding: 3px 3px 10px 0;"
+                                    src="./images/lau.png" alt="lau">
+                            </div>
+                        </div>
+                        <div id="amnhac" class="music">
+                            <div class="div-title">
+                                <h3 class="main-titles">Âm nhạc</h3>
+                            </div>
+                            <div class="child-music"
+                                style="display: flex; justify-content: space-between; align-items: center;">
+                                <div class="wrap">
+                                    <p class="title">Nhạc thiếu nhi</p>
+                                    <ul>
+                                        <li>Nắng sân trường</li>
+                                        <li>Mẹ yêu không nào</li>
+                                        <li>Ba bà đi bán lợn con</li>
+                                    </ul>
+                                </div>
+                                <img style="width: 150px; height: 150px; padding-right: 3px;" src="./images/trong.png"
+                                    alt="trong">
+                            </div>
+                            <hr>
+                            <div class="danca" style="display: flex; justify-content: space-between;">
+                                <div class="wrap">
+                                    <p class="title">Dân ca</p>
+                                    <ul>
+                                        <li>Bèo dạt mây trôi</li>
+                                        <li>Mười thương</li>
+                                        <li>Lý cây bông</li>
+                                    </ul>
+                                </div>
+                                <img style="width: 100px; height: 100px;" src="./images/music.png" alt="son-node">
+                            </div>
+                            <a style="float: right;" href="#Home">Về đầu trang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>

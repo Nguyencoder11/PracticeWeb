@@ -1,12 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài viết về Mũi Né</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .container {
+            display: flex;
+            position: relative;
+            top: 50px;
+            width: 800px;
+            padding: 16px 10px;
+            height: auto;
+            box-shadow: 6px 6px 12px 4px black;
+        }
+
+        .image {
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .image .imgs {
+            width: inherit;
+            height: 150px;
+            cursor: pointer;
+        }
+
+        .image .imgs img {
+            width: inherit;
+            height: inherit;
+        }
+
+        .content {
+            margin: 0 4px;
+            margin-left: 16px;
+        }
+
+        .detail {
+            padding: 15px;
+            background: rgb(252, 255, 189);
+            border: 5px dashed rgb(201, 149, 21);
+            text-align: justify;
+            display: none;
+        }
+
+        .image-hover {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="image">
+            <div class="imgs">
+                <img src="./images/muine.png" alt="">
+            </div>
+            <div class="image-hover">
+                <h1 style="color: rgb(201, 149, 21);">Mũi Né - Huyền bí và quyến rũ</h1>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="detail">
+                <p>Biển và cát, đó là những gì mà Phan Thiết hào hiệp ban tặng cho những người đến thăm và du lịch tại
+                    vùng đất này. Bạn có thể đến đây nghĩ dưỡng vào cả mùa mưa. <a href="#"
+                        style="color: rgb(201, 149, 21); font-weight: bold;">Phan thiết</a> là nơi nằm trong vùng nhiệt
+                    đới, ít chịu ảnh hưởng của gió mùa đông bắc, khí hậu nóng và khô. Lượng mưa trung bình chỉ có 800 -
+                    1.150 mm, nơi có lượng mưa ít nhất trong khu vực Nam Bộ. Phan Thiết là 1 trong những thành phố trẻ
+                    nhất trong nước và là trung tâm giao dịch và trao đổi chính của Bình Thuận nơi mà có nhiều cái nhất
+                    trong nước như: Tp. Phan Thiết là thành phố biển trẻ nhất nước, có tượng Phật nằm dài nhất nước.
+                    Tháp nước Phan Thiết là tháp đẹp nhất nước, có ngọn Hải đăng Kê Gà cao nhất nước và có hồ Liên Lạc
+                    rộng nhất nước v.v...</p>
+                <p>......... Từ nhiều năm qua, đồi cát Mũi Né đã trở thành đề tài nổi bật trong các cuộc thi ảnh nghệ
+                    thuật, đồng thời đây là một danh thắng nổi tiếng, là biểu tượng và là hình ảnh đẹp của vùng đất Bình
+                    Thuận. Bờ biển của <a href="#" style="color:rgb(201, 149, 21); font-weight: bold;">Hón Rơm</a> sạch
+                    và đẹp, nước trong xanh. Sóng chạy dưới chân những hàng dừa mát rượi và trĩu quả. Du khách cũng có
+                    thể khám phá những bãi biển hoang sơ chưa bị khai thác bởi con người.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var image = document.querySelector(".imgs img");
+        var content = document.querySelector(".content .detail");
+        var imageHover = document.querySelector(".image-hover");
+
+        image.addEventListener('click', function () {
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+
+        image.addEventListener("mouseover", function () {
+            imageHover.style.display = "block";
+        });
+
+        image.addEventListener("mouseout", function () {
+            imageHover.style.display = "none";
+        });
+
+        document.addEventListener('click', function (event) {
+            if (event.target !== image) {
+                content.style.display = "none";
+            }
+        });
+    </script>
 </body>
+
 </html>

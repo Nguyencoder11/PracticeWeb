@@ -1,12 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sử dụng DHTML với CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            font-size: 1.2rem;
+        }
+
+        .container {}
+
+        h1 {
+            text-align: center;
+            color: rgb(249, 134, 11);
+        }
+
+        .content {
+            padding: 10px;
+            position: relative;
+        }
+
+        .image {
+            background-image: url(./images/hoamai.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 200px;
+            height: 150px;
+            float: right;
+        }
+
+        p {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        span {
+            color: rgb(249, 134, 11);
+            font-size: 3rem;
+            float: left;
+            padding: 4px;
+            background-color: rgb(244, 207, 159);
+            border: 6px double rgb(249, 134, 11);
+            margin-right: 3px;
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .detail {
+            position: absolute;
+            right: 30%;
+            background: rgb(211, 254, 209);
+            border: 12px solid;
+            border-style: ridge;
+            border-color: green;
+            display: none;
+        }
+
+        .image:hover .detail {
+            cursor: pointer;
+            display: block;
+        }
+
+        .detail li {
+            list-style: inside url(./images/Screenshot\ 2023-10-13\ 005227.png);
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <h1>Bông điên điển</h1>
+        <h1>Món ngon mùa nước nổi</h1>
+        <div class="content">
+            <div class="image">
+                <div class="detail" style="color: green; font-size: 20px; padding: 5px 16px;">
+                    <h2 style="text-align: center; font-style: italic; font-size: 2rem;">Hương vị miền Nam</h2>
+                    <ul>
+                        <li>Bánh tráng Mỹ Lồng, bánh phồng Sơn Đốc</li>
+                        <li>Dồi lươn rim nước cốt dừa</li>
+                        <li>Bún mắm</li>
+                        <li>Bún nước lèo Sóc Trăng</li>
+                        <li>Nem lai Vung</li>
+                        <li>Cốm dẹp</li>
+                        <li>Bưởi Tân Triều</li>
+                    </ul>
+                </div>
+            </div>
+            <p>
+                <span>M</span>ỗi năm cứ vào đầu mùa nước nổi, nơi các bờ sông, bờ rạch, bờ ruộng, những cây điên điển
+                chết
+                héo từ những tháng ngày nào tự nhiên xanh tươi trở lại làm đẹp thêm phong cảnh Đồng bằng sông Cửu Long.
+                Chừng một vài tháng sau, khi con nước tràn ngập các bờ sông, bờ ruộng, cũng là lúc điên điển trổ đầy
+                cành
+                những đóa hoa vàng rực màu nắng phương Nam. Phất phơ trong ngọn gió hoặc rũ oằn trong những cơn mưa.
+            </p>
+            <p>Trước đây không lâu, người nông dân nghèo khổ dùng bông điên điển nấu cháo cầm cự với cơn đói của những
+                tháng
+                ngày không có khả năng kiếm được tiển. Ngày nay, với những người nghèo, bông điên điển giúp họ có thêm
+                thu
+                nhập bên cạnh việc đánh bắt cá, tép trên những cánh đồng trắng xóa một màu nước nổi. Nhưng để trở thành
+                món
+                ngon, cách giản dị nhất là người ta dùng bông điên điển làm dưa. Chỉ cần ngâm bông điên điển đã lặt rửa
+                sạch
+                với giá sống trong nước muối có độ mặn vừa chuẩn, chừng ba ngày sau là đã có một đĩa dưa vừa chua vừa
+                giòn
+                chấm với nước tương giằm ót ăn đã ngon mà chấm với cá hoặc thịt kho lại càng ngon hơn./</p>
+            </p>
+            .................
+        </div>
+    </div>
 </body>
+
 </html>
