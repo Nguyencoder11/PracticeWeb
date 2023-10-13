@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tạo form và các điều khiển</title>
     <style>
-        h2{
+        h2 {
             color: #CC6600;
         }
-        table{
+
+        table {
             background-color: rgb(129, 252, 252);
+        }
+
+        input {
+            outline: none;
         }
     </style>
 </head>
+
 <body>
     <form action="">
         <table border="1" align="center" rules="all" height="100px">
-            <caption><h2>Đăng nhập</h2></caption>
+            <caption>
+                <h2>Đăng nhập</h2>
+            </caption>
             <tr>
                 <td><label for="Username">Mã người dùng:</label></td>
-                <td><input type="text" id="username" name="uname" value="ptnhung"></td>
+                <td><input type="text" id="username" name="uname" value="ptnhung" required></td>
             </tr>
             <tr>
                 <td><label for="Username">Mật khẩu:</label></td>
-                <td><input type="password" id="password" name="Password" value="*********"></td>
+                <td><input type="password" id="password" name="Password" value="*********" required></td>
             </tr>
             <tr>
-                <td colspan="2" align="center"><button type="submit" onclick="submit()">Đồng ý</button></td>
-            </tr>
-            <tr>
-                <td>
-                    <div id="show"></div>
+                <td colspan="2" align="center">
+                    <button type="button" name="button" id="clickbutton">Đồng ý</button>
                 </td>
+            </tr>
+            <tr>
+                <td id="notify" colspan="2" align="center" style="color: blue;"></td>
             </tr>
         </table>
     </form>
     <script>
-        let getIn = document.getElementById('username').value;
+        var btn = document.querySelector("#clickbutton");
+        var notification = document.querySelector("#notify");
 
-        let getOut = document.getElementById('show');
-        function submit(){
-            let a = getInt;
-            getOut.value = a;
-            let result = getOut.value;
-        }
-
-        getOut.innerHTML = result;
-
+        btn.addEventListener('click', function () {
+            var user_name = document.querySelector("#username");
+            var password = document.querySelector("#password");
+            if (user_name.value !== "" && password.value !== "") {
+                notification.textContent = user_name.value;
+            } else {
+                notification.textContent = "Yêu cầu nhập đầy đủ thông tin";
+            }
+        });
     </script>
 </body>
+
 </html>
