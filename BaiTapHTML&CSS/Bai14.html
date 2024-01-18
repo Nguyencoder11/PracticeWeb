@@ -29,11 +29,18 @@
                     frameborder="0" scrolling="no" width="600" name="menuFrame"></iframe>
             </div>
             <div class="content-link" style="height: 1035px; width: 900px; padding-left: 5px;">
-                <iframe id="menuFrame" style="height: 1035px; width: 900px;" src="Bai12.html" frameborder="0" scrolling="yes"
+                <iframe id="menuFrame" style="height: 1035px; width: 900px;" src="" frameborder="0" scrolling="yes"
                     height="700"></iframe>
             </div>
         </div>
     </div>
+
+    <script>
+        function changeContent(link) {
+            var contentIframe = parent.document.querySelector('.content-link #menuFrame');
+            contentIframe.src = link;
+        }
+    </script>
 </body>
 
 </html>
